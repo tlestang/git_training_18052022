@@ -4,7 +4,7 @@ from scipy.optimize import curve_fit
 
 filename = "example_data.csv"
 data = np.loadtxt(filename, delimiter=",", skiprows=1)
-plt.plot(data[:,0], data[:,1])
+plt.plot(data[:,0], data[:,1], "ro")
 
 def model(x, p1, p2):
    return p1 * np.cos(p2 *x) + p2 * np.sin(p1 * x)
